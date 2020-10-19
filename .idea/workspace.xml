@@ -4,37 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6f3dfcd-05a6-4574-b98a-bb060d3f1cd1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/classic/ConnectionPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/classic/SingletonObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/classic/ThreadLocalTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/locks/ConnectionPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/locks/LockInterruptiblyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/locks/ReentrantReadWriteLockTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="c6f3dfcd-05a6-4574-b98a-bb060d3f1cd1" name="Default" comment="Additional code">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Multithreading.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Multithreading.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classic/DBConnPoolTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interruption/InterrruptSleepingThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interruption/InterrruptSleepingThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interruption/InterruptRunningThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interruption/InterruptRunningThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interruption/InterruptWaitingThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interruption/InterruptWaitingThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interruption/SelfInterrupt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interruption/SelfInterrupt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/locks/ProducerConsumerUsingLockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/locks/ProducerConsumerUsingLockTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/locks/ReentrantLockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/locks/ReentrantLockTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/locks/implementation/Lock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/locks/implementation/PetersonLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/locks/PetersonLock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/misc/InterruptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interruption/InterruptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/misc/PropagatingInterruption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interruption/PropagatingInterruption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/registers/RegBooleanMRSWRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/registers/RegBooleanMRSWRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/registers/RegMRSWRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/registers/RegMRSWRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/registers/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/registers/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/registers/SafeBooleanMRSWRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/registers/SafeBooleanMRSWRegister.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +34,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -215,7 +190,19 @@
       <option name="presentableId" value="Default" />
       <updated>1520933871250</updated>
     </task>
+    <task id="LOCAL-00001" summary="Additional code">
+      <created>1603079731497</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603079731497</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Additional code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Additional code" />
   </component>
   <component name="WindowStateProjectService">
     <state x="653" y="209" key="#com.intellij.ide.util.MemberChooser" timestamp="1603038767891">
@@ -238,22 +225,26 @@
       <screen x="0" y="23" width="1680" height="926" />
     </state>
     <state x="603" y="200" key="#xdebugger.evaluate/0.23.1680.926@0.23.1680.926" timestamp="1603031550028" />
-    <state width="1638" height="246" key="GridCell.Tab.0.bottom" timestamp="1603079626074">
+    <state x="180" y="61" key="CommitChangelistDialog2" timestamp="1603079731018">
       <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="246" key="GridCell.Tab.0.bottom/0.23.1680.926@0.23.1680.926" timestamp="1603079626074" />
-    <state width="1638" height="246" key="GridCell.Tab.0.center" timestamp="1603079626072">
+    <state x="180" y="61" key="CommitChangelistDialog2/0.23.1680.926@0.23.1680.926" timestamp="1603079731018" />
+    <state width="1638" height="246" key="GridCell.Tab.0.bottom" timestamp="1603079715064">
       <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="246" key="GridCell.Tab.0.center/0.23.1680.926@0.23.1680.926" timestamp="1603079626072" />
-    <state width="1638" height="246" key="GridCell.Tab.0.left" timestamp="1603079626072">
+    <state width="1638" height="246" key="GridCell.Tab.0.bottom/0.23.1680.926@0.23.1680.926" timestamp="1603079715064" />
+    <state width="1638" height="246" key="GridCell.Tab.0.center" timestamp="1603079715063">
       <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="246" key="GridCell.Tab.0.left/0.23.1680.926@0.23.1680.926" timestamp="1603079626072" />
-    <state width="1638" height="246" key="GridCell.Tab.0.right" timestamp="1603079626073">
+    <state width="1638" height="246" key="GridCell.Tab.0.center/0.23.1680.926@0.23.1680.926" timestamp="1603079715063" />
+    <state width="1638" height="246" key="GridCell.Tab.0.left" timestamp="1603079715063">
       <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="246" key="GridCell.Tab.0.right/0.23.1680.926@0.23.1680.926" timestamp="1603079626073" />
+    <state width="1638" height="246" key="GridCell.Tab.0.left/0.23.1680.926@0.23.1680.926" timestamp="1603079715063" />
+    <state width="1638" height="246" key="GridCell.Tab.0.right" timestamp="1603079715064">
+      <screen x="0" y="23" width="1680" height="926" />
+    </state>
+    <state width="1638" height="246" key="GridCell.Tab.0.right/0.23.1680.926@0.23.1680.926" timestamp="1603079715064" />
     <state width="1638" height="332" key="GridCell.Tab.1.bottom" timestamp="1603035986003">
       <screen x="0" y="23" width="1680" height="926" />
     </state>
@@ -270,10 +261,18 @@
       <screen x="0" y="23" width="1680" height="926" />
     </state>
     <state width="1638" height="332" key="GridCell.Tab.1.right/0.23.1680.926@0.23.1680.926" timestamp="1603035986002" />
+    <state x="480" y="254" key="MultipleFileMergeDialog" timestamp="1603079754615">
+      <screen x="0" y="23" width="1680" height="926" />
+    </state>
+    <state x="480" y="254" key="MultipleFileMergeDialog/0.23.1680.926@0.23.1680.926" timestamp="1603079754615" />
     <state x="349" y="125" key="SettingsEditor" timestamp="1603079704950">
       <screen x="0" y="23" width="1680" height="926" />
     </state>
     <state x="349" y="125" key="SettingsEditor/0.23.1680.926@0.23.1680.926" timestamp="1603079704950" />
+    <state x="440" y="226" key="Vcs.Push.Dialog.v2" timestamp="1603079733317">
+      <screen x="0" y="23" width="1680" height="926" />
+    </state>
+    <state x="440" y="226" key="Vcs.Push.Dialog.v2/0.23.1680.926@0.23.1680.926" timestamp="1603079733317" />
     <state x="505" y="225" width="670" height="676" key="search.everywhere.popup" timestamp="1603036990482">
       <screen x="0" y="23" width="1680" height="926" />
     </state>
