@@ -1,4 +1,4 @@
-package registers;
+package algorithms.registers;
 
 public class RegMRSWRegister implements Register<Byte> {
 	private static int RANGE = Byte.MAX_VALUE - Byte.MIN_VALUE + 1;

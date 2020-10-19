@@ -1,4 +1,4 @@
-package registers;
+package algorithms.registers;
 
 public class RegBooleanMRSWRegister implements Register<Boolean> {
 	ThreadLocal<Boolean> last;

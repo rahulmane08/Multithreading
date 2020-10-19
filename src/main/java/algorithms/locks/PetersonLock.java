@@ -1,4 +1,4 @@
-package locks.implementation;
+package algorithms.locks;
 
 public class PetersonLock implements Lock {
 

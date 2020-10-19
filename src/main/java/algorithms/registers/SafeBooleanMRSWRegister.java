@@ -1,4 +1,4 @@
-package registers;
+package algorithms.registers;
 
 public class SafeBooleanMRSWRegister implements Register<Boolean> {
 	boolean[] s_table; // array of safe SRSW registers

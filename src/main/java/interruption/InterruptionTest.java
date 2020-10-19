@@ -1,4 +1,4 @@
-package misc;
+package interruption;
 
 public class InterruptionTest {
 	public static void main(String[] args) throws InterruptedException {

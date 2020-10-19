@@ -1,4 +1,4 @@
-package registers;
+package algorithms.registers;
 
 public interface Register<T> {
 	T read();

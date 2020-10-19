@@ -6,6 +6,9 @@ public class InterruptWaitingThread {
 		Runnable r = ()->{
 			synchronized(lock)
 			{
+				System.out.printf("Thread [%s] isInterrupted:%s%n",
+						Thread.currentThread().getName(),
+						Thread.currentThread().isInterrupted());
 				int counter = 1;
 				while(counter<100)
 					System.out.println(counter+" square = "+Math.pow(counter++, 2));
@@ -17,7 +20,8 @@ public class InterruptWaitingThread {
 			Thread.sleep(5*1000);
 			t.interrupt();
 			Thread.sleep(5*1000);
-			System.out.println(t.isInterrupted()+","+t.isAlive());
 		}
+		t.join();
+		System.out.println("main thread exiting");
 	}
 }

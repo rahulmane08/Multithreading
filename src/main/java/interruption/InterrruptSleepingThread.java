@@ -5,7 +5,6 @@ import java.util.List;
 
 public class InterrruptSleepingThread {
 	public static void main(String[] args) throws InterruptedException {
-		final List<String> list = new ArrayList<String>();
 		Thread t1 = new Thread(new Runnable() {
 			
 			@Override
@@ -13,16 +12,14 @@ public class InterrruptSleepingThread {
 				int counter = 1;
 				while(!Thread.currentThread().isInterrupted())
 				{
-					System.out.println(counter+" square = "+Math.pow(counter++, 2));
 					try {
+						System.out.println(counter+" square = "+Math.pow(counter++, 2));
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
-						
-						e.printStackTrace();
+						System.out.printf("Thread [%s] interrupted my main thread, isInterrupted:%s,%n",
+								Thread.currentThread().getName(), Thread.currentThread().isInterrupted());
 						Thread.currentThread().interrupt();
 					}
-					list.add(Thread.currentThread().getName()+":elem"+counter);
-					
 				}
 			}
 		});
@@ -34,6 +31,6 @@ public class InterrruptSleepingThread {
 		System.out.println("main thread interrupting the worker thread");
 		t1.interrupt();
 		System.out.println(t1.isInterrupted());
-		System.out.println(list);
+		t1.join();
 	}
 }

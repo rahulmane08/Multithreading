@@ -1,4 +1,4 @@
-package misc;
+package interruption;
 
 class PropagatesInterruption extends Thread
 {

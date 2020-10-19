@@ -7,8 +7,8 @@ import java.util.concurrent.locks.ReentrantLock;
 
 class PCQueue<T>
 {
-	private PriorityQueue<T> queue;
-	private volatile int MAX_CAPACITY;
+	private final PriorityQueue<T> queue;
+	private final int MAX_CAPACITY;
 	public PCQueue(int capacity)
 	{
 		MAX_CAPACITY = capacity;
@@ -23,13 +23,15 @@ class PCQueue<T>
 	public void put(T element) throws InterruptedException{
 		lock.lock();
 		try{
-			while(queue.size()==MAX_CAPACITY)
+			while(queue.size()==MAX_CAPACITY) {
 				isFull.await();
-			
+			}
+
 			boolean isAdded = queue.offer(element);
-			if(isAdded)
+			if(isAdded) {
 				isEmpty.signalAll();
-		}		
+			}
+		}
 		finally{
 			lock.unlock(); 	
 		}
@@ -38,21 +40,19 @@ class PCQueue<T>
 	public T take() throws InterruptedException
 	{
 		lock.lock();
-		T element = null;
 		try{
-			while(queue.size()==0)
+			T element = null;
+			while(queue.size()==0) {
 				isEmpty.await();
-			
+
+			}
 			element =  queue.poll();
-			
 			isFull.signalAll();
-			
 			return element;
 		}
 		finally{
 			lock.unlock();
 		}
-		
 	}
 }
 

@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c6f3dfcd-05a6-4574-b98a-bb060d3f1cd1" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/classic/PrintEvenOdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/classic/ConnectionPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/classic/SingletonObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/classic/ThreadLocalTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/locks/ConnectionPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/locks/LockInterruptiblyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/locks/ReentrantReadWriteLockTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Multithreading.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Multithreading.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/collections/ConcurrentHashmapIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collections/map/ConcurrentHashmapIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classic/DBConnPoolTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interruption/InterrruptSleepingThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interruption/InterrruptSleepingThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interruption/InterruptRunningThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interruption/InterruptRunningThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interruption/InterruptWaitingThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interruption/InterruptWaitingThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interruption/SelfInterrupt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interruption/SelfInterrupt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locks/ProducerConsumerUsingLockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/locks/ProducerConsumerUsingLockTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locks/ReentrantLockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/locks/ReentrantLockTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locks/implementation/Lock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locks/implementation/PetersonLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/locks/PetersonLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/misc/InterruptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interruption/InterruptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/misc/PropagatingInterruption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interruption/PropagatingInterruption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/registers/RegBooleanMRSWRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/registers/RegBooleanMRSWRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/registers/RegMRSWRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/registers/RegMRSWRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/registers/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/registers/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/registers/SafeBooleanMRSWRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/registers/SafeBooleanMRSWRegister.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +65,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="$MAVEN_REPOSITORY$" />
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -54,66 +75,34 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="959" />
+    <option name="height" value="948" />
   </component>
-  <component name="ProjectId" id="1bkqL9c2X1MaSkCpcYnDWNIjDXh" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1iyIMmDx068ZCpHZUuRNtcxTEoq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="collections" />
-      <recent name="collections.map" />
+      <recent name="interruption" />
+      <recent name="classic" />
+      <recent name="algorithms" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PrintEvenOdd">
+  <component name="RunManager" selected="Application.ReentrantReadWriteLockTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
-    <configuration name="CyclicBarrierTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="synchronizers.CyclicBarrierTest" />
-      <module name="Multithreading" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="synchronizers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PrintEvenOdd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="classic.PrintEvenOdd" />
-      <module name="Multithreading" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="classic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProducerConsumerUsingLockTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="locks.ProducerConsumerUsingLockTest" />
+    <configuration name="ConnectionPool (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="locks.ConnectionPool" />
       <module name="Multithreading" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -126,13 +115,55 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScheduledThreadPoolExecutorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="executors.ScheduledThreadPoolExecutorTest" />
+    <configuration name="ConnectionPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="classic.ConnectionPool" />
       <module name="Multithreading" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="executors.*" />
+          <option name="PATTERN" value="classic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LockInterruptiblyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="locks.LockInterruptiblyTest" />
+      <module name="Multithreading" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="locks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReentrantLockTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="locks.ReentrantLockTest" />
+      <module name="Multithreading" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="locks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReentrantReadWriteLockTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="locks.ReentrantReadWriteLockTest" />
+      <module name="Multithreading" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="locks.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -162,21 +193,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.ScheduledThreadPoolExecutorTest" />
-      <item itemvalue="Application.ProducerConsumerUsingLockTest" />
-      <item itemvalue="Application.PrintEvenOdd" />
-      <item itemvalue="Application.CyclicBarrierTest" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PrintEvenOdd" />
-        <item itemvalue="Application.CyclicBarrierTest" />
-        <item itemvalue="Application.ScheduledThreadPoolExecutorTest" />
-        <item itemvalue="Application.ProducerConsumerUsingLockTest" />
+        <item itemvalue="Application.ReentrantReadWriteLockTest" />
+        <item itemvalue="Application.ConnectionPool (1)" />
+        <item itemvalue="Application.ReentrantLockTest" />
+        <item itemvalue="Application.LockInterruptiblyTest" />
+        <item itemvalue="Application.ConnectionPool" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -191,61 +218,81 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="976" y="167" key="#com.intellij.ide.util.MemberChooser" timestamp="1589190167578">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state x="653" y="209" key="#com.intellij.ide.util.MemberChooser" timestamp="1603038767891">
+      <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state x="976" y="167" key="#com.intellij.ide.util.MemberChooser/0.23.1680.933@0.23.1680.933" timestamp="1589190167578" />
-    <state x="385" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589189902587">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state x="653" y="209" key="#com.intellij.ide.util.MemberChooser/0.23.1680.926@0.23.1680.926" timestamp="1603038767891" />
+    <state x="604" y="387" width="472" height="205" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1603040049831">
+      <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state x="385" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1680.933@0.23.1680.933" timestamp="1589189902587" />
-    <state width="1638" height="308" key="GridCell.Tab.0.bottom" timestamp="1589276834629">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state x="604" y="387" width="472" height="205" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1680.926@0.23.1680.926" timestamp="1603040049831" />
+    <state x="615" y="400" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1603039988141">
+      <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="308" key="GridCell.Tab.0.bottom/0.23.1680.933@0.23.1680.933" timestamp="1589276834629" />
-    <state width="1638" height="308" key="GridCell.Tab.0.center" timestamp="1589276834628">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state x="615" y="400" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1680.926@0.23.1680.926" timestamp="1603039988141" />
+    <state x="313" y="142" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603025526501">
+      <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="308" key="GridCell.Tab.0.center/0.23.1680.933@0.23.1680.933" timestamp="1589276834628" />
-    <state width="1638" height="308" key="GridCell.Tab.0.left" timestamp="1589276834627">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state x="313" y="142" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1680.926@0.23.1680.926" timestamp="1603025526501" />
+    <state x="603" y="200" key="#xdebugger.evaluate" timestamp="1603031550028">
+      <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="308" key="GridCell.Tab.0.left/0.23.1680.933@0.23.1680.933" timestamp="1589276834627" />
-    <state width="1638" height="308" key="GridCell.Tab.0.right" timestamp="1589276834628">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state x="603" y="200" key="#xdebugger.evaluate/0.23.1680.926@0.23.1680.926" timestamp="1603031550028" />
+    <state width="1638" height="246" key="GridCell.Tab.0.bottom" timestamp="1603079626074">
+      <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="308" key="GridCell.Tab.0.right/0.23.1680.933@0.23.1680.933" timestamp="1589276834628" />
-    <state width="1638" height="308" key="GridCell.Tab.1.bottom" timestamp="1589276834630">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state width="1638" height="246" key="GridCell.Tab.0.bottom/0.23.1680.926@0.23.1680.926" timestamp="1603079626074" />
+    <state width="1638" height="246" key="GridCell.Tab.0.center" timestamp="1603079626072">
+      <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="308" key="GridCell.Tab.1.bottom/0.23.1680.933@0.23.1680.933" timestamp="1589276834630" />
-    <state width="1638" height="308" key="GridCell.Tab.1.center" timestamp="1589276834629">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state width="1638" height="246" key="GridCell.Tab.0.center/0.23.1680.926@0.23.1680.926" timestamp="1603079626072" />
+    <state width="1638" height="246" key="GridCell.Tab.0.left" timestamp="1603079626072">
+      <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="308" key="GridCell.Tab.1.center/0.23.1680.933@0.23.1680.933" timestamp="1589276834629" />
-    <state width="1638" height="308" key="GridCell.Tab.1.left" timestamp="1589276834629">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state width="1638" height="246" key="GridCell.Tab.0.left/0.23.1680.926@0.23.1680.926" timestamp="1603079626072" />
+    <state width="1638" height="246" key="GridCell.Tab.0.right" timestamp="1603079626073">
+      <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="308" key="GridCell.Tab.1.left/0.23.1680.933@0.23.1680.933" timestamp="1589276834629" />
-    <state width="1638" height="308" key="GridCell.Tab.1.right" timestamp="1589276834630">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state width="1638" height="246" key="GridCell.Tab.0.right/0.23.1680.926@0.23.1680.926" timestamp="1603079626073" />
+    <state width="1638" height="332" key="GridCell.Tab.1.bottom" timestamp="1603035986003">
+      <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="308" key="GridCell.Tab.1.right/0.23.1680.933@0.23.1680.933" timestamp="1589276834630" />
-    <state x="428" y="231" key="IDE.errors.dialog" timestamp="1589188342730">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state width="1638" height="332" key="GridCell.Tab.1.bottom/0.23.1680.926@0.23.1680.926" timestamp="1603035986003" />
+    <state width="1638" height="332" key="GridCell.Tab.1.center" timestamp="1603035986002">
+      <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state x="428" y="231" key="IDE.errors.dialog/0.23.1680.933@0.23.1680.933" timestamp="1589188342730" />
-    <state x="328" y="71" key="SettingsEditor" timestamp="1589189866119">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state width="1638" height="332" key="GridCell.Tab.1.center/0.23.1680.926@0.23.1680.926" timestamp="1603035986002" />
+    <state width="1638" height="332" key="GridCell.Tab.1.left" timestamp="1603035986002">
+      <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state x="328" y="71" key="SettingsEditor/0.23.1680.933@0.23.1680.933" timestamp="1589189866119" />
-    <state x="541" y="244" width="598" height="490" key="find.popup" timestamp="1589187588734">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state width="1638" height="332" key="GridCell.Tab.1.left/0.23.1680.926@0.23.1680.926" timestamp="1603035986002" />
+    <state width="1638" height="332" key="GridCell.Tab.1.right" timestamp="1603035986002">
+      <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state x="541" y="244" width="598" height="490" key="find.popup/0.23.1680.933@0.23.1680.933" timestamp="1589187588734" />
-    <state x="505" y="227" width="670" height="676" key="search.everywhere.popup" timestamp="1589189287971">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state width="1638" height="332" key="GridCell.Tab.1.right/0.23.1680.926@0.23.1680.926" timestamp="1603035986002" />
+    <state x="349" y="125" key="SettingsEditor" timestamp="1603079704950">
+      <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state x="505" y="227" width="670" height="676" key="search.everywhere.popup/0.23.1680.933@0.23.1680.933" timestamp="1589189287971" />
+    <state x="349" y="125" key="SettingsEditor/0.23.1680.926@0.23.1680.926" timestamp="1603079704950" />
+    <state x="505" y="225" width="670" height="676" key="search.everywhere.popup" timestamp="1603036990482">
+      <screen x="0" y="23" width="1680" height="926" />
+    </state>
+    <state x="505" y="225" width="670" height="676" key="search.everywhere.popup/0.23.1680.926@0.23.1680.926" timestamp="1603036990482" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
