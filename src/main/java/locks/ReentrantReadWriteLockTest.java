@@ -14,7 +14,7 @@ public class ReentrantReadWriteLockTest {
 
             try {
                 System.out.println(counter.getVal());
-                Thread.sleep(2*1000);
+                Thread.sleep(2 * 1000);
                 System.out.println(counter.getVal());
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -29,7 +29,7 @@ public class ReentrantReadWriteLockTest {
         Thread writer = new Thread(() -> {
             try {
                 counter.increment();
-                Thread.sleep(2*1000);
+                Thread.sleep(2 * 1000);
                 counter.increment();
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -49,8 +49,8 @@ public class ReentrantReadWriteLockTest {
     }
 
     private static class Counter {
-        private ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
-        private AtomicInteger integer = new AtomicInteger(0);
+        private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
+        private final AtomicInteger integer = new AtomicInteger(0);
 
         public int getVal() {
             try {

@@ -7,26 +7,9 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+import examples.Connection;
+
 public class ConnectionPool {
-    private static class Connection {
-        private final String name;
-
-        public Connection(String name) {
-            this.name = name;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        @Override
-        public String toString() {
-            return "Connection{" +
-                    "name='" + name + '\'' +
-                    '}';
-        }
-    }
-
     private final List<Connection> pool;
     private final int maxCapacity;
     private final Lock lock;
@@ -38,6 +21,31 @@ public class ConnectionPool {
         this.lock = new ReentrantLock();
         this.isPoolEmpty = lock.newCondition();
         this.isPoolFull = lock.newCondition();
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        ConnectionPool connectionPool = new ConnectionPool(5);
+
+        // add 5 connections
+        for (int i = 0; i < 5; i++) {
+            connectionPool.addConnection(new Connection("connection-" + i));
+        }
+
+        Thread thread = new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
+                connectionPool.getConnection();
+            }
+        }, "worker-thread-1");
+
+        // add next 5 connections, but main thread will block due to queue full
+        thread.start();
+        for (int i = 5; i < 10; i++) {
+            connectionPool.addConnection(new Connection("connection-" + i));
+        }
+
+        thread.join();
+
+        System.out.println("main thread exiting");
     }
 
     public Connection getConnection() {
@@ -80,30 +88,5 @@ public class ConnectionPool {
         } finally {
             lock.unlock();
         }
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-        ConnectionPool connectionPool = new ConnectionPool(5);
-
-        // add 5 connections
-        for (int i = 0; i < 5; i++) {
-            connectionPool.addConnection(new Connection("connection-" + i));
-        }
-
-        Thread thread = new Thread(() -> {
-            for (int i = 0; i < 10; i++) {
-                connectionPool.getConnection();
-            }
-        }, "worker-thread-1");
-
-        // add next 5 connections, but main thread will block due to queue full
-        thread.start();
-        for (int i = 5; i < 10; i++) {
-            connectionPool.addConnection(new Connection("connection-" + i));
-        }
-
-        thread.join();
-
-        System.out.println("main thread exiting");
     }
 }

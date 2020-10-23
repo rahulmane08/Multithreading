@@ -1,6 +1,5 @@
-package classic;
+package examples;
 
-import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -13,9 +12,15 @@ public class PrintEvenOdd {
         ReentrantLock lock = new ReentrantLock();
         CountDownLatch latch = new CountDownLatch(2);
         Task task = new Task(new int[]{1, 2, 3, 4, 5, 6, 7});
-        new OddEvenThread(task, true, latch, lock).start(); // even thread
-        new OddEvenThread(task, false, latch, lock).start(); // odd thread
+        OddEvenThread evenThread = new OddEvenThread(task, true, latch, lock);
+        OddEvenThread oddThread = new OddEvenThread(task, false, latch, lock);
+        evenThread.start(); // even thread
+        oddThread.start(); // odd thread
         latch.await();
+        evenThread.interrupt();
+        oddThread.interrupt();
+        evenThread.join();
+        oddThread.join();
         System.out.println("Exiting");
     }
 
@@ -49,7 +54,7 @@ public class PrintEvenOdd {
 
         @Override
         public void run() {
-            while (true) {
+            while (!Thread.currentThread().isInterrupted()) {
                 try {
                     reentrantLock.lockInterruptibly();
                     if (task.isFinished()) {
@@ -63,7 +68,8 @@ public class PrintEvenOdd {
                         task.setFlag(!task.isFlag());
                     }
                 } catch (InterruptedException e) {
-                    System.out.println(Thread.currentThread().getName() + " interrupted");
+                    System.out.println(Thread.currentThread().getName() + " interrupted and is finishing");
+                    Thread.currentThread().interrupt();
                 } finally {
                     reentrantLock.unlock();
                 }

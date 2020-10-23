@@ -3,10 +3,13 @@ package classic;
 import java.util.ArrayList;
 import java.util.List;
 
+import examples.Connection;
+
 public class ConnectionPool {
 
     private final List<Connection> pool;
     private final int maxCapacity;
+
     public ConnectionPool(int maxCapacity) {
         this.pool = new ArrayList<>(maxCapacity);
         this.maxCapacity = maxCapacity;
@@ -77,25 +80,6 @@ public class ConnectionPool {
                 System.out.printf("Producer thread: [%s] interrupted while adding connection%n",
                         Thread.currentThread().getName());
             }
-        }
-    }
-
-    private static class Connection {
-        private final String name;
-
-        public Connection(String name) {
-            this.name = name;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        @Override
-        public String toString() {
-            return "Connection{" +
-                    "name='" + name + '\'' +
-                    '}';
         }
     }
 }
