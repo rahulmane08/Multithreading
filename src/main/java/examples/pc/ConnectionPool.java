@@ -1,9 +1,7 @@
-package classic;
+package examples.pc;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import examples.Connection;
 
 public class ConnectionPool {
 

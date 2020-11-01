@@ -1,4 +1,4 @@
-package classic;
+package examples.classic;
 
 public class SingletonObject {
     private static SingletonObject INSTANCE;

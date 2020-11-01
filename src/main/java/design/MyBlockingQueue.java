@@ -1,29 +1,32 @@
-package locks;
+package design;
 
-import java.util.PriorityQueue;
+import java.util.ArrayDeque;
+import java.util.Queue;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-class PCQueue<T> {
-    private final PriorityQueue<T> queue;
-    private final int MAX_CAPACITY;
-    //create a lock and 2 conditions for isEmpty or isFull
-    Lock lock = new ReentrantLock(true);
-    Condition isFull = lock.newCondition();
-    Condition isEmpty = lock.newCondition();
-    public PCQueue(int capacity) {
-        MAX_CAPACITY = capacity;
-        queue = new PriorityQueue<T>(MAX_CAPACITY);
+public class MyBlockingQueue<T> {
+    private final Queue<T> queue;
+    private final int maxCapacity;
+    private final Lock lock;
+    private final Condition isFull;
+    private final Condition isEmpty;
+
+    public MyBlockingQueue(int capacity) {
+        maxCapacity = capacity;
+        this.queue = new ArrayDeque<>(maxCapacity);
+        this.lock  = new ReentrantLock(true);
+        this.isFull = lock.newCondition();
+        this.isEmpty  = lock.newCondition();
     }
 
     public void put(T element) throws InterruptedException {
         lock.lock();
         try {
-            while (queue.size() == MAX_CAPACITY) {
+            while (queue.size() == maxCapacity) {
                 isFull.await();
             }
-
             boolean isAdded = queue.offer(element);
             if (isAdded) {
                 isEmpty.signalAll();
@@ -36,7 +39,7 @@ class PCQueue<T> {
     public T take() throws InterruptedException {
         lock.lock();
         try {
-            T element = null;
+            T element;
             while (queue.size() == 0) {
                 isEmpty.await();
 
@@ -48,12 +51,8 @@ class PCQueue<T> {
             lock.unlock();
         }
     }
-}
-
-
-public class ProducerConsumerUsingLockTest {
     public static void main(String[] args) throws InterruptedException {
-        final PCQueue<String> queue = new PCQueue<String>(10);
+        final MyBlockingQueue<String> queue = new MyBlockingQueue<String>(10);
         queue.put("ELEMENT");
 
         Runnable consumer = () -> {
@@ -68,7 +67,6 @@ public class ProducerConsumerUsingLockTest {
                     e.printStackTrace();
                     Thread.currentThread().interrupt();
                 }
-
             }
         };
 
@@ -79,6 +77,7 @@ public class ProducerConsumerUsingLockTest {
         Thread.sleep(20 * 1000);
         consumer1.interrupt();
         consumer2.interrupt();
-
+        consumer1.join();
+        consumer2.join();
     }
 }

@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Semaphore;
 
-import examples.Connection;
+import examples.pc.Connection;
 
 public class ConnectionPoolUsingSemaphore {
-    private final List<examples.Connection> pool;
+    private final List<Connection> pool;
     private final Semaphore semaphore;
 
     public ConnectionPoolUsingSemaphore(int maxCapacity) {
         this.semaphore = new Semaphore(maxCapacity);
         this.pool = new ArrayList<>();
         for (int i = 0; i < maxCapacity; i++) {
-            this.pool.add(new examples.Connection("connection-" + i));
+            this.pool.add(new Connection("connection-" + i));
         }
     }
 
@@ -47,8 +47,8 @@ public class ConnectionPoolUsingSemaphore {
         System.out.println("main thread exiting");
     }
 
-    public examples.Connection getConnection() {
-        examples.Connection connection = null;
+    public Connection getConnection() {
+        Connection connection = null;
         try {
             semaphore.acquire();
             Thread.sleep(2 * 1000);

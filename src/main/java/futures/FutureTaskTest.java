@@ -7,16 +7,20 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
+import lombok.AllArgsConstructor;
+import lombok.ToString;
+
 public class FutureTaskTest {
-    public static void main(String[] args) {
-        Task t1 = new Task(4);
-        Task t2 = new Task(8);
-        Task t3 = new Task(10);
-        Task t4 = new Task(15);
+    public static void main(String[] args) throws InterruptedException {
+        Task t1 = new Task(1,4);
+        Task t2 = new Task(2,8);
+        Task t3 = new Task(3,10);
+        Task t4 = new Task(4,15);
 
         List<Task> tasks = Arrays.asList(t1, t2, t3, t4);
         List<FutureTask<String>> futureTasks = new ArrayList<FutureTask<String>>();
@@ -24,42 +28,36 @@ public class FutureTaskTest {
         for (Task t : tasks)
             futureTasks.add((FutureTask<String>) service.submit(t));
 
-        for (FutureTask<String> ft : futureTasks)
+        for (FutureTask<String> ft : futureTasks) {
+            String threadName = Thread.currentThread().getName();
             try {
-
-                System.out.println(ft.get(4, TimeUnit.SECONDS));
+                System.out.printf("Thread: [%s] got the result = %s %n", threadName, ft.get(4, TimeUnit.SECONDS));
             } catch (InterruptedException e) {
-
-                e.printStackTrace();
+                System.out.printf("Thread: [%s] was interrupted %n", threadName);
             } catch (ExecutionException e) {
-
-                e.printStackTrace();
+                System.out.printf("Thread: [%s] encountered execution exception = %s %n", threadName, e.getMessage());
             } catch (TimeoutException e) {
-
-                e.printStackTrace();
                 ft.cancel(true);
+                System.out.printf("Future timed out, Thread: [%s] cancelling the task %n", threadName);
             }
-
+        }
         futureTasks.clear();
-
         service.shutdown();
-
     }
 
-    static class Task implements Callable<String> {
+    @AllArgsConstructor
+    @ToString
+    private static class Task implements Callable<String> {
+        private final int id;
         private final int time;
-
-
-        public Task(int time) {
-            super();
-            this.time = time;
-        }
-
 
         @Override
         public String call() throws Exception {
-            System.out.println(Thread.currentThread().getName() + " executing the task");
+            System.out.printf("Thread : [%s] executing the task: %s %n", Thread.currentThread().getName(), this);
             Thread.sleep(this.time * 1000);
+            if (id == 3) {
+                throw new RuntimeException("Illegal thread not allowed");
+            }
             return Thread.currentThread().getName() + " task";
         }
 

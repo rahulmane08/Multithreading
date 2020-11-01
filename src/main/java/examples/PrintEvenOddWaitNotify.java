@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 public class PrintEvenOddWaitNotify {
@@ -18,8 +19,8 @@ public class PrintEvenOddWaitNotify {
         CountDownLatch latch = new CountDownLatch(2);
         AtomicBoolean currentRoundFlag = new AtomicBoolean(true);
 
-        Thread evenThread = new Thread(new Printer(list, true, latch, currentRoundFlag), "even-thread");
-        Thread oddThread = new Thread(new Printer(list, false, latch, currentRoundFlag), "odd-thread");
+        Thread evenThread = new Thread(new OddEvenPrinterTask(list, true, latch, currentRoundFlag), "even-thread");
+        Thread oddThread = new Thread(new OddEvenPrinterTask(list, false, latch, currentRoundFlag), "odd-thread");
         evenThread.start();
         oddThread.start();
 
@@ -33,42 +34,37 @@ public class PrintEvenOddWaitNotify {
     }
 
     @Data
-    static class Printer implements Runnable {
-        private final List<Integer> list;
+    @AllArgsConstructor
+    static class OddEvenPrinterTask implements Runnable {
+        private final List<Integer> data;
         private final boolean flag;
-        private final AtomicBoolean currentRoundFlag;
         private final CountDownLatch latch;
-
-        public Printer(List<Integer> list, boolean flag, CountDownLatch latch, AtomicBoolean currentRoundFlag) {
-            this.list = list;
-            this.flag = flag;
-            this.latch = latch;
-            this.currentRoundFlag = currentRoundFlag;
-        }
+        private final AtomicBoolean currentRoundFlag;
 
         @Override
         public void run() {
-            String threadName = Thread.currentThread().getName();
             while (!Thread.currentThread().isInterrupted()) {
-                try {
-                    synchronized (list) {
-                        while (currentRoundFlag.get() != flag) {
-                            list.wait();
+                synchronized (data) {
+                    try {
+                        while (flag != currentRoundFlag.get()) {
+                            data.wait();
                         }
-                        if (!list.isEmpty()) {
-                            System.out.printf("Thread: [%s] printing: %s %n", threadName, list.remove(0));
-                            currentRoundFlag.set(!flag);
-                            Thread.sleep(2 * 1000);
+
+                        if (!data.isEmpty()) {
+                            System.out.printf("Thread: [%s] printing: %s %n",
+                                    Thread.currentThread().getName(), data.remove(0));
                         } else {
                             latch.countDown();
                         }
-                        list.notify();
+                        currentRoundFlag.set(!flag);
+                        data.notifyAll();
+                    } catch (Exception ex) {
+                        System.out.printf("Thread: [%s] interrupted. %n", Thread.currentThread().getName());
+                        Thread.currentThread().interrupt();
                     }
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
                 }
             }
-            System.out.printf("Thread: [%s] is interrupted, hence finishing %n", threadName);
+            System.out.printf("Thread: [%s] is interrupted and finishing %n", Thread.currentThread().getName());
         }
     }
 }

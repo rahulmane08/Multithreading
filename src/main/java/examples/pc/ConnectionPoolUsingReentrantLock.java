@@ -1,51 +1,27 @@
-package locks;
+package examples.pc;
 
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import examples.Connection;
-
-public class ConnectionPool {
+public class ConnectionPoolUsingReentrantLock {
     private final List<Connection> pool;
     private final int maxCapacity;
     private final Lock lock;
     private final Condition isPoolEmpty, isPoolFull;
 
-    public ConnectionPool(int maxCapacity) {
+    public ConnectionPoolUsingReentrantLock(int maxCapacity) {
         this.maxCapacity = maxCapacity;
         this.pool = new ArrayList<>(maxCapacity);
         this.lock = new ReentrantLock();
         this.isPoolEmpty = lock.newCondition();
         this.isPoolFull = lock.newCondition();
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-        ConnectionPool connectionPool = new ConnectionPool(5);
-
-        // add 5 connections
-        for (int i = 0; i < 5; i++) {
-            connectionPool.addConnection(new Connection("connection-" + i));
-        }
-
-        Thread thread = new Thread(() -> {
-            for (int i = 0; i < 10; i++) {
-                connectionPool.getConnection();
-            }
-        }, "worker-thread-1");
-
-        // add next 5 connections, but main thread will block due to queue full
-        thread.start();
-        for (int i = 5; i < 10; i++) {
-            connectionPool.addConnection(new Connection("connection-" + i));
-        }
-
-        thread.join();
-
-        System.out.println("main thread exiting");
     }
 
     public Connection getConnection() {
@@ -85,8 +61,39 @@ public class ConnectionPool {
         } catch (InterruptedException e) {
             System.out.printf("Producer thread: [%s] interrupted while adding connection%n",
                     Thread.currentThread().getName());
+            Thread.currentThread().interrupt();
         } finally {
             lock.unlock();
         }
     }
+
+    public static void main(String[] args) throws InterruptedException {
+        ConnectionPoolUsingReentrantLock connectionPool = new ConnectionPoolUsingReentrantLock(5);
+
+        // add 5 connections
+        for (int i = 0; i < 5; i++) {
+            connectionPool.addConnection(new Connection("connection-" + i));
+        }
+
+        ExecutorService service = Executors.newFixedThreadPool(3);
+        for (int i = 0; i < 3; i++) {
+            Runnable r =() -> {
+                while (!Thread.currentThread().isInterrupted()) {
+                    connectionPool.getConnection();
+                }
+            };
+            service.submit(r);
+        }
+
+        // add next 5 connections, but main thread will block due to queue full
+        for (int i = 5; i < 10; i++) {
+            connectionPool.addConnection(new Connection("connection-" + i));
+            Thread.sleep(2000);
+        }
+        service.shutdown();
+        service.awaitTermination(30, TimeUnit.SECONDS);
+        service.shutdownNow();
+        System.out.println("main thread exiting");
+    }
+
 }

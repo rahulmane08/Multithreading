@@ -57,11 +57,12 @@ public class ReentrantReadWriteLockTest {
                 lock.readLock().lock();
                 System.out.printf("Thread [%s] acquired readlock%n", Thread.currentThread().getName());
                 Thread.sleep(2 * 1000);
-                lock.readLock().unlock();
                 return integer.get();
             } catch (InterruptedException ex) {
                 System.out.println(ex.getMessage());
                 return 0;
+            } finally {
+                lock.readLock().unlock();
             }
         }
 

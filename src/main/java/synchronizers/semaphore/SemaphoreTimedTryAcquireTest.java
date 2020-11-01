@@ -3,7 +3,7 @@ package synchronizers.semaphore;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
-public class SemaphoreTimedAcquireTest {
+public class SemaphoreTimedTryAcquireTest {
 
     public static void main(String[] args) throws InterruptedException {
         Semaphore semaphore = new Semaphore(1);
