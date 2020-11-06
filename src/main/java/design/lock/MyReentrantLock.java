@@ -38,6 +38,11 @@ public class MyReentrantLock implements Lock {
             return;
         }
 
+        if (isHeldByCurrentThread()) {
+            // reentrancy
+            System.out.println("Lock is held by current thread");
+            return;
+        }
         synchronized (lock) {
             while (!isAvailable()) {
                 try {
@@ -51,9 +56,14 @@ public class MyReentrantLock implements Lock {
     }
 
     private void lockFairly() {
+        if (isHeldByCurrentThread()) {
+            // reentrancy
+            System.out.println("Lock is held by current thread");
+            return;
+        }
         addWorker();
         synchronized (lock) {
-            while (!isAvailable() || (fair && workerThreads.peek() != Thread.currentThread())) {
+            while (!isAvailable() || workerThreads.peek() != Thread.currentThread()) {
                 try {
                     lock.wait();
                 } catch (InterruptedException e) {
@@ -121,17 +131,13 @@ public class MyReentrantLock implements Lock {
     @Override
     public void unlock() {
         synchronized (lock) {
-            releaseLock();
+            boolean flag = owner.compareAndSet(Thread.currentThread(), null);
+            if (!flag) {
+                throw new IllegalMonitorStateException();
+            }
+            locked.set(false);
+            lock.notifyAll();
         }
-    }
-
-    private void releaseLock() {
-        boolean flag = owner.compareAndSet(Thread.currentThread(), null);
-        if (!flag) {
-            throw new IllegalMonitorStateException();
-        }
-        locked.set(false);
-        lock.notifyAll();
     }
     //-----UNLOCK------------
 

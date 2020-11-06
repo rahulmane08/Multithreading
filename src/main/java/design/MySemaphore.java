@@ -11,33 +11,36 @@ public class MySemaphore {
     }
 
     public void acquire() throws InterruptedException {
-        checkIfInterrupted();
+        throwIfInterrupted();
         synchronized (this) {
             while (this.workers == this.permits) {
                 wait();
             }
+            throwIfInterrupted();
             ++this.workers;
             notifyAll();
         }
     }
 
     public void acquire(long timeout, TimeUnit timeUnit) throws InterruptedException {
-        checkIfInterrupted();
+        throwIfInterrupted();
         synchronized (this) {
             while (this.workers == this.permits) {
                 wait(timeUnit.toMillis(timeout));
             }
+            throwIfInterrupted();
             ++this.workers;
             notifyAll();
         }
     }
 
     public void acquire(int permits) throws InterruptedException {
-        checkIfInterrupted();
+        throwIfInterrupted();
         synchronized (this) {
             while (this.workers + permits >= this.permits) {
                 wait();
             }
+            throwIfInterrupted();
             this.workers += permits;
             notifyAll();
         }
@@ -102,7 +105,7 @@ public class MySemaphore {
     }
 
     public boolean tryAcquire(long timeout, TimeUnit timeUnit) throws InterruptedException {
-        checkIfInterrupted();
+        throwIfInterrupted();
         synchronized (this) {
             while (this.workers == this.permits) {
                 try {
@@ -138,7 +141,7 @@ public class MySemaphore {
         return workers != 0;
     }
 
-    private void checkIfInterrupted() throws InterruptedException {
+    private void throwIfInterrupted() throws InterruptedException {
         if (Thread.currentThread().isInterrupted()) {
             throw new InterruptedException();
         }

@@ -5,60 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6f3dfcd-05a6-4574-b98a-bb060d3f1cd1" name="Default" comment="Reformatting">
-      <change afterPath="$PROJECT_DIR$/src/main/java/atomic/AtomicIntegerArrayTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/atomic/AtomicIntegerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/design/MyCyclicBarrier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/design/MySemaphore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/design/executors/MyThreadPoolExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/design/executors/MyThreadPoolExecutorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/design/lock/MyReentrantFairLockTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/design/lock/MyReentrantLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/design/lock/MyReentrantLockTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/design/lock/MyReentrantReadWriteLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/design/lock/MyReentrantReadWriteLockTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/design/lock/MyRentrantTimedTryLockTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/design/lock/MyRentrantTryLockTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examples/PrintOddEvenReentrantLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examples/PrintSequentialReentrantLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examples/PrintSequentiallyWaitNotify.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examples/classic/ImmutabilityTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examples/classic/IntrinsicLockWaitTimeoutInterruptionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examples/threadlocal/ThreadLocalTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/locks/ReentrantConditionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/locks/ReentrantLockFairnessTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/synchronizers/barrier/BarrierBrokenTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/synchronizers/barrier/BarrierInterruptionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/synchronizers/barrier/BarrierTimedAwaitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/synchronizers/barrier/CyclicBarrierTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/synchronizers/latch/LatchInterruptionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/synchronizers/semaphore/SemaphoreInterruptionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atomic/AtomicReferenceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atomic/AtomicReferenceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classic/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examples/pc/ConnectionPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classic/SingletonObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examples/classic/SingletonObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classic/ThreadLocalTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classic/WaitTimeoutTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/design/MyCountDownLatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/design/MyCountDownLatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examples/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examples/pc/Connection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examples/PrintEvenOdd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examples/PrintEvenOddUsingBarrier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examples/PrintEvenOddWaitNotify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examples/PrintEvenOddWaitNotify.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examples/PrintOddEven1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/futures/FutureTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/futures/FutureTaskTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interruption/InterrruptSleepingThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interruption/InterrruptSleepingThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interruption/InterruptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interruption/InterruptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/locks/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examples/pc/ConnectionPoolUsingReentrantLock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/locks/ProducerConsumerUsingLockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/design/MyBlockingQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/locks/ReentrantLockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/locks/ReentrantLockTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/locks/ReentrantLockTryLockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/locks/ReentrantLockTryLockTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/locks/ReentrantReadWriteLockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/locks/ReentrantReadWriteLockTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/misc/AtomicVariableTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/misc/ImmutabilityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/misc/ThreadLocalTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/synchronizers/CyclicBarrierTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/synchronizers/latch/SimpleLatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/synchronizers/latch/LatchTimeAwaitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/synchronizers/semaphore/ConnectionPoolUsingSemaphore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/synchronizers/semaphore/ConnectionPoolUsingSemaphore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/synchronizers/semaphore/SemaphoreTimedAcquireTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/synchronizers/semaphore/SemaphoreTimedTryAcquireTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/design/MyBlockingQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/design/MyBlockingQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/design/MySemaphore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/design/MySemaphore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/design/lock/MyReentrantLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/design/lock/MyReentrantLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interruption/InterruptionTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,17 +82,17 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MyThreadPoolExecutorTest">
+  <component name="RunManager" selected="Application.MyCountDownLatch">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
-    <configuration name="MyReentrantFairLockTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="design.lock.MyReentrantFairLockTest" />
+    <configuration name="AtomicIntegerArrayTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="atomic.AtomicIntegerArrayTest" />
       <module name="Multithreading" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="design.lock.*" />
+          <option name="PATTERN" value="atomic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,13 +100,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyReentrantReadWriteLockTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="design.lock.MyReentrantReadWriteLockTest" />
+    <configuration name="InterruptWaitingThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="interruption.InterruptWaitingThread" />
       <module name="Multithreading" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="design.lock.*" />
+          <option name="PATTERN" value="interruption.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,13 +114,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyThreadPoolExecutorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="design.executors.MyThreadPoolExecutorTest" />
+    <configuration name="MyBlockingQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="design.MyBlockingQueue" />
       <module name="Multithreading" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="design.executors.*" />
+          <option name="PATTERN" value="design.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -177,13 +128,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReentrantLockFairnessTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="locks.ReentrantLockFairnessTest" />
+    <configuration name="MyCountDownLatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="design.MyCountDownLatch" />
       <module name="Multithreading" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="locks.*" />
+          <option name="PATTERN" value="design.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -191,13 +142,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReentrantLockTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="locks.ReentrantLockTest" />
+    <configuration name="ThreadLocalTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="examples.threadlocal.ThreadLocalTest" />
       <module name="Multithreading" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="locks.*" />
+          <option name="PATTERN" value="examples.threadlocal.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -229,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MyThreadPoolExecutorTest" />
-        <item itemvalue="Application.MyReentrantReadWriteLockTest" />
-        <item itemvalue="Application.MyReentrantFairLockTest" />
-        <item itemvalue="Application.ReentrantLockTest" />
-        <item itemvalue="Application.ReentrantLockFairnessTest" />
+        <item itemvalue="Application.MyCountDownLatch" />
+        <item itemvalue="Application.MyBlockingQueue" />
+        <item itemvalue="Application.AtomicIntegerArrayTest" />
+        <item itemvalue="Application.ThreadLocalTest" />
+        <item itemvalue="Application.InterruptWaitingThread" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603433307308</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Reformatting">
+      <created>1604258159715</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604258159715</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -312,26 +270,26 @@
       <screen x="0" y="23" width="1680" height="926" />
     </state>
     <state x="683" y="376" key="#xdebugger.evaluate/0.23.1680.926@0.23.1680.926" timestamp="1603280065128" />
-    <state x="180" y="61" key="CommitChangelistDialog2" timestamp="1603433306834">
+    <state x="180" y="61" key="CommitChangelistDialog2" timestamp="1604258159184">
       <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state x="180" y="61" key="CommitChangelistDialog2/0.23.1680.926@0.23.1680.926" timestamp="1603433306834" />
-    <state width="1638" height="377" key="GridCell.Tab.0.bottom" timestamp="1604060099442">
+    <state x="180" y="61" key="CommitChangelistDialog2/0.23.1680.926@0.23.1680.926" timestamp="1604258159184" />
+    <state width="1638" height="377" key="GridCell.Tab.0.bottom" timestamp="1604519123572">
       <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="377" key="GridCell.Tab.0.bottom/0.23.1680.926@0.23.1680.926" timestamp="1604060099442" />
-    <state width="1638" height="377" key="GridCell.Tab.0.center" timestamp="1604060099439">
+    <state width="1638" height="377" key="GridCell.Tab.0.bottom/0.23.1680.926@0.23.1680.926" timestamp="1604519123572" />
+    <state width="1638" height="377" key="GridCell.Tab.0.center" timestamp="1604519123571">
       <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="377" key="GridCell.Tab.0.center/0.23.1680.926@0.23.1680.926" timestamp="1604060099439" />
-    <state width="1638" height="377" key="GridCell.Tab.0.left" timestamp="1604060099439">
+    <state width="1638" height="377" key="GridCell.Tab.0.center/0.23.1680.926@0.23.1680.926" timestamp="1604519123571" />
+    <state width="1638" height="377" key="GridCell.Tab.0.left" timestamp="1604519123570">
       <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="377" key="GridCell.Tab.0.left/0.23.1680.926@0.23.1680.926" timestamp="1604060099439" />
-    <state width="1638" height="377" key="GridCell.Tab.0.right" timestamp="1604060099440">
+    <state width="1638" height="377" key="GridCell.Tab.0.left/0.23.1680.926@0.23.1680.926" timestamp="1604519123570" />
+    <state width="1638" height="377" key="GridCell.Tab.0.right" timestamp="1604519123571">
       <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state width="1638" height="377" key="GridCell.Tab.0.right/0.23.1680.926@0.23.1680.926" timestamp="1604060099440" />
+    <state width="1638" height="377" key="GridCell.Tab.0.right/0.23.1680.926@0.23.1680.926" timestamp="1604519123571" />
     <state width="1638" height="332" key="GridCell.Tab.1.bottom" timestamp="1603738093269">
       <screen x="0" y="23" width="1680" height="926" />
     </state>
@@ -364,10 +322,10 @@
       <screen x="0" y="23" width="1680" height="926" />
     </state>
     <state x="349" y="112" key="SettingsEditor/0.23.1680.926@0.23.1680.926" timestamp="1603177519806" />
-    <state x="440" y="226" key="Vcs.Push.Dialog.v2" timestamp="1603433308566">
+    <state x="440" y="226" key="Vcs.Push.Dialog.v2" timestamp="1604258162003">
       <screen x="0" y="23" width="1680" height="926" />
     </state>
-    <state x="440" y="226" key="Vcs.Push.Dialog.v2/0.23.1680.926@0.23.1680.926" timestamp="1603433308566" />
+    <state x="440" y="226" key="Vcs.Push.Dialog.v2/0.23.1680.926@0.23.1680.926" timestamp="1604258162003" />
     <state x="578" y="241" key="extract.method.dialog" timestamp="1603711587109">
       <screen x="0" y="23" width="1680" height="926" />
     </state>

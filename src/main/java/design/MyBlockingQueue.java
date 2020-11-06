@@ -42,7 +42,6 @@ public class MyBlockingQueue<T> {
             T element;
             while (queue.size() == 0) {
                 isEmpty.await();
-
             }
             element = queue.poll();
             isFull.signalAll();
